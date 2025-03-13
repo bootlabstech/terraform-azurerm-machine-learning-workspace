@@ -84,21 +84,8 @@ variable "name" {
 }
 
 
-variable "application_insights_id" {
-  description = "Application Insights ID for monitoring"
-  type        = string
-}
 
 
-variable "key_vault_id" {
-  description = "Azure Key Vault ID for ML workspace"
-  type        = string
-}
-
-variable "storage_account_id" {
-  description = "Azure Storage Account ID"
-  type        = string
-}
 
 variable "identity_type" {
   description = "Type of managed identity (e.g., SystemAssigned)"

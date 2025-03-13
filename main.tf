@@ -28,7 +28,7 @@ resource "azurerm_machine_learning_workspace" "ml_workspace" {
 # SA
 # Creates a Storage account
 resource "azurerm_storage_account" "example" {
-  name                            = "${var.name}-stg"
+  name                            = "${var.name}sa"
   resource_group_name             = var.resource_group_name
   location                        = var.location
   account_kind                    = var.account_kind
@@ -39,7 +39,6 @@ resource "azurerm_storage_account" "example" {
   min_tls_version                 = var.min_tls_version
   access_tier                     = var.access_tier
   public_network_access_enabled   = var.public_network_access_enabled
-  enable_https_traffic_only       = var.enable_https_traffic_only
 
   lifecycle {
     ignore_changes = [
